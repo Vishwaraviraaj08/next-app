@@ -71,7 +71,6 @@
 const express = require('express');
 const next = require('next');
 const { MongoClient, ServerApiVersion } = require('mongodb');
-import Page from '../app/posts/page';
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -124,7 +123,8 @@ expressApp.post("/login", async (req, resp) => {
 
 expressApp.post("/posts/new", async (req, resp) => {
     addBlog(req.body).catch(console.dir).then((result) => {
-        resp.status(200).send("Blog Added");
+        // resp.status(200).send("Blog Added");
+        resp.redirect("/posts")
     }).catch((e) => {
         resp.status(500).send("Something Went Wrong");
     });
