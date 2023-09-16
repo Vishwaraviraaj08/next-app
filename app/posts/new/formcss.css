@@ -1,0 +1,40 @@
+/* custom-bootstrap.css */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+body{
+    background-color: black;
+}
+.border-primary {
+    border-color: #007bff !important;
+}
+
+.text-primary {
+    color: #007bff !important;
+}
+
+.form-label {
+    color: white;
+}
+
+.custom-input {
+    font-family: Consolas, monospace; /* Use Consolas as the font-family */
+}
+
+
+@keyframes glowing {
+    0% {
+        border-color: #ccc;
+        box-shadow: none;
+    }
+    50% {
+        border-color: #007bff;
+        box-shadow: 0 0 30px #007bff;
+    }
+    100% {
+        border-color: #ccc;
+        box-shadow: none;
+    }
+}
+
+.glowing-border {
+    animation: glowing 4s infinite;
+}
