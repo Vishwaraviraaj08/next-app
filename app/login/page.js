@@ -6,7 +6,11 @@ import {useState} from "react";
 function Form({ option }) {
 
     return (
-        <form method="POST" action={"/" + (option === 1 ? "sign-in" : "sign-up")} className="account-form" onSubmit={(evt) => evt.preventDefault()}>
+        <form method="POST"
+              // action={"/" + (option === 1 ? "sign-in" : "sign-up")}
+                action={"/posts"}
+              className="account-form"
+        >
             <div
                 className={
                     "account-form-fields " +
