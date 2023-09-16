@@ -8,7 +8,7 @@ function Form({ option }) {
     return (
         <form method="POST"
               // action={"/" + (option === 1 ? "sign-in" : "sign-up")}
-                action={"/posts"}
+                action={"/login"}
               className="account-form"
         >
             <div
@@ -51,7 +51,8 @@ function LoginPage() {
     const [option, setOption] = useState(1);
 
     return (
-        <div className="container bg-black">
+        <div className="container">
+
             <header className="text-center mt-5">
                 <div
                     className={

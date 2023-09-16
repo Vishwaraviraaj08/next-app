@@ -31,7 +31,7 @@ function Page() {
     return (
         <div className="container">
             <h3 className="mb-5" style={{color:"#00b4ff", fontFamily:'Consolas, monospace'}}>Create a New Post</h3>
-            <Form onSubmit={handleSubmit}>
+            <Form action={"/posts/new"} method="POST">
                 <Form.Group controlId="title">
                     <Form.Label style={{ fontFamily: 'Consolas, monospace' }} className={"h5"}>Title *</Form.Label>
                     <Form.Control

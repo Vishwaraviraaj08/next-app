@@ -71,6 +71,7 @@
 const express = require('express');
 const next = require('next');
 const { MongoClient, ServerApiVersion } = require('mongodb');
+import Page from '../app/posts/page';
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -108,9 +109,9 @@ expressApp.post("/login", async (req, resp) => {
     try {
         const result = await addUser(userJSON);
         if (result) {
-            resp.status(200).send("User Registered");
+            resp.status(200);
         } else {
-            resp.status(500).send("Failed to add user");
+            resp.status(500);
         }
     } catch (e) {
         console.error(e);
